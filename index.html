@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fintrade India</title>
+  <style>
+:root {
+  --primary-color: #3f3d56;
+  --accent-color: #00b894;
+  --bg-light: #fefefe;
+  --text-dark: #2c2c2c;
+  --section-alt: #f7f9fc;
+  --highlight: #f9c74f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(to right, var(--primary-color), #5e60ce);
+  color: white;
+  padding: 70px 20px 50px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 32px;
+  background: var(--accent-color);
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background: var(--highlight);
+  transform: scale(1.05);
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section:nth-of-type(even) {
+  background-color: var(--section-alt);
+}
+
+h2 {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  border-left: 5px solid var(--accent-color);
+  padding-left: 15px;
+  margin-bottom: 35px;
+}
+
+article {
+  margin-bottom: 35px;
+}
+
+ul {
+  list-style: none;
+  margin-top: 20px;
+  columns: 2;
+}
+
+ul li {
+  padding-left: 28px;
+  position: relative;
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+}
+
+ul li::before {
+  content: '✔';
+  color: var(--accent-color);
+  position: absolute;
+  left: 0;
+  font-size: 1rem;
+}
+
+/* Gallery styling */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.gallery-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  background: linear-gradient(145deg, #ffffff, #f2f4f8);
+}
+
+.gallery-card:hover {
+  transform: translateY(-7px);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.gallery-card p {
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+/* Contact & Address */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.contact-form,
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input {
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+form label {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+button {
+  padding: 14px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--highlight);
+  transform: scale(1.03);
+}
+
+.contact-info p {
+  margin: 12px 0;
+  font-size: 1.05rem;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 25px;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  ul {
+    columns: 1;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  .cta-button {
+    padding: 12px 24px;
+  }
+}
+
+/* Back to top button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 14px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  display: none;
+  z-index: 1000;
+  transition: background 0.3s, transform 0.3s;
+}
+
+#backToTop:hover {
+  background-color: var(--highlight);
+  transform: scale(1.1);
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Best Results for Your Financial Requirements</h1>
+    <p>Fulfill your requirements with our quality services.</p>
+    <a href="#contact" class="cta-button">Contact Now</a>
+  </header>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <p>Need Money, Financial Suggestions, Tax Savings - We are here</p>
+    <ul>
+      <li>Business Loan</li>
+      <li>Home Loan</li>
+      <li>Top-Up Loan</li>
+      <li>Personal Loan</li>
+      <li>Loan Against Property</li>
+      <li>Commercial Purchase</li>
+      <li>Insurance</li>
+      <li>ISO Certification</li>
+      <li>Digital Signature</li>
+      <li>GST / ITR Filing</li>
+      <li>PF Related Services</li>
+      <li>PAN / TAN</li>
+      <li>EXIM Consultation</li>
+      <li>Book-keeping & many more...</li>
+    </ul>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      FINTRADE INDIA is a one-stop solution for all your financial needs like Home Loan, Personal Loans, Business Loans & Balance Transfer with or Without Top-up.
+    </p>
+    <h3 style="margin-top:20px;color:var(--accent-color)">Our Aim</h3>
+    <p>
+      To establish as the best consulting firm to guide individuals and corporates about their various Financial, Commercial, Insurance & Other Services through Customized Solutions.
+    </p>
+    <h3 style="margin-top:20px;color:var(--accent-color)">Committed to Service</h3>
+    <p>
+      Every successful financial strategy starts with an excellent client relationship. Our mission and values include exceeding our client’s every expectation.
+    </p>
+  </section>
+
+  <section id="loans">
+    <h2>Loans and Services for Your Needs</h2>
+    <article>
+      <h3>Personal Loans</h3>
+      <p>Easy documentation process and fastest approval with attractive rates of interest.</p>
+    </article>
+    <article>
+      <h3>Home Loans</h3>
+      <p>Doorstep service with customized housing loan solutions.</p>
+    </article>
+    <article>
+      <h3>Business Loans</h3>
+      <p>Money to expand or fund your business with customized plans.</p>
+    </article>
+    <article>
+      <h3>Insurance Services</h3>
+      <p>Life, health, vehicle, property and other insurances at one place.</p>
+    </article>
+    <article>
+      <h3>Taxation & Book-keeping</h3>
+      <p>Help with accounting, GST returns, ITRs and more.</p>
+    </article>
+    <article>
+      <h3>Other Services</h3>
+      <p>Digital signatures, EXIM consultations, PAN/TAN, EPFO and more.</p>
+    </article>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1581090700227-1e8f4ec78c4d?fit=crop&w=800&q=80" alt="Office 1">
+        <p>Our Main Office Setup</p>
+      </div>
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee13?fit=crop&w=800&q=80" alt="Meeting">
+        <p>Team Meeting in Progress</p>
+      </div>
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1620056790071-f6e5dd4fba8e?fit=crop&w=800&q=80" alt="Client">
+        <p>Client Consultation Session</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-container">
+      <div class="contact-form">
+        <form>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email*</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="contact">Contact No.*</label>
+          <input type="tel" id="contact" name="contact" required />
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <div class="contact-info">
+        <p><strong>📞</strong> +91 9558685235 / 9155971286 / 0260-2966 244</p>
+        <p><strong>📧</strong> info@finnace.in</p>
+        <p><strong>📍</strong> Navi Mumbai, INDIA</p>
+        <p><strong>🕘</strong> Mon-Sat: 10 AM - 7 PM<br>Sunday: 10 AM - 3 PM</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Copyright © 2021 FINANCE INDIA - All Rights Reserved.</p>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Go to top">↑</button>
+
+  <script>
+    const backToTopBtn = document.getElementById("backToTop");
+
+    window.onscroll = () => {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTopBtn.style.display = "block";
+      } else {
+        backToTopBtn.style.display = "none";
+      }
+    };
+
+    backToTopBtn.onclick = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    };
+  </script>
+</body>
+</html>
